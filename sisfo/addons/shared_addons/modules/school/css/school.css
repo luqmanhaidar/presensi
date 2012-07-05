@@ -1,0 +1,49 @@
+.rounded {
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+}
+
+.shadow {
+    -webkit-box-shadow : silver 2px 2px 20px;
+    box-shadow : silver 2px 2px 20px;
+    -moz-box-shadow : silver 2px 2px 20px;
+}
+
+.clear {
+	clear: both;
+}
+
+.front-table {
+    width: 90%;
+    border: solid 1px silver;
+}
+
+table thead tr {
+    background-color: #BFBFBF;
+    color:black;
+}
+
+table thead tr th {
+    padding: 5px;
+}
+
+table tbody tr {
+    background-color: white;
+}
+
+table tbody td {
+    padding: 5px;
+}
+
+table tbody tr:hover{
+    background-color: #E8FAFF;
+}
+
+.lesson-wrapper {
+    background-color: white;
+}
+
+.lesson-wrapper:hover {
+    background-color: #E8FAFF;
+}

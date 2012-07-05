@@ -1,0 +1,23 @@
+<?php
+		$db_host = "localhost";  // nama host  
+		$db_user = "root";  // username mysql  
+		$db_pass = ""; //password isi sesuai seting server Anda.  
+		$db_name = "presensi";  // nama database
+					
+		$link = mysql_pconnect ($db_host, $db_user, $db_pass) or die ("Ga bisa connect");  
+		mysql_select_db ($db_name) or die ("Ga bisa select database"); 
+			 
+					$query = "SELECT DISTINCT date_format(Tanggal, '%M-%Y') as bulantahun FROM presensi";
+					$hasil = mysql_query($query);
+					echo "<h2>Laporan Bulanan</h2>";
+					echo "<div id='lipsum'>";
+					
+					while ($data = mysql_fetch_array($hasil))
+					{
+					   echo"<p class='info'><b><a href='laporan.php?bt=".$data['bulantahun']."'>".$data['bulantahun']."</a></b><span>X</span></p>";
+					   
+					}
+					
+					?>
+     
+				<?php

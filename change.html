@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Sistem Presensi Universitas Negeri Yogyakarta</title>	
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />  
+	<meta http-equiv="refresh" content="600;url=http://presensi.uny.ac.id/" />
+	<meta name="keywords" content=""></meta>
+	<meta name="description" content="Sistem Presensi"></meta>
+	<meta http-equiv="imagetoolbar" content="no" />
+	<link rel="stylesheet" href="screen.css" media="screen" />
+	<script language="javascript" type="text/javascript" src="mootools.js"></script> 
+	<script language="javascript" type="text/javascript">
+		function submit_form(){
+			var fn = function(){
+				$('task').disabled=false;
+				$('response').removeClass('ajax-loading').addClass('response');
+			}
+			var html = "Harap menunggu...";
+			$('response').removeClass('response').addClass('ajax-loading').setHTML(html);
+			$('task').disabled=true;
+			var options = {};
+			options['update'] = 'response'; // id div yang akan di tulisi response dari action
+			options['onComplete'] = fn;
+			options['evalScripts'] = false; //jika respon mengandung javascript berikan nilai true
+			$('form').send(options);
+		}
+	</script>
+</head>
+<body>
+
+<div id="container">	
+		
+		<form name="form" id="form" autocomplete="off" method="post" runat="server" action="changepass.php" onsubmit="submit_form(); return false;">
+			<h3><span>Ganti Password --Sistem presensi Wajah--</span></h3>
+			<fieldset><legend>Contact form</legend>
+				<br />
+			<p class="first">
+				<label for="Nip"><b>NIP /ID Anda</b></label>
+				<input type="text" name="niplama" id="niplama" size="30" />
+				<label for="Nip"><b>Password Lama</b></label>
+				<input type="password" name="passlama" id="passlama" size="30" />
+				<label for="name"><b>ID / Password baru</b></label>
+				<input type="password" name="nipbaru" id="nipbaru" size="30" />
+				<label for="name"><b>Ulangi ID / Password baru</b></label>
+				<input type="password" name="nipulang" id="nipulang" size="30" />
+			</p>
+			<p>NB: <em>Password Minimal 6 Karakter(alphanumeric)</em></p>
+			</fieldset>
+			<p class="submit"><button type="submit" name="task" id="task" >KLiK</button></p>	
+		</form>	
+		<div id="response"></div>
+
+</div>
+
+</body>
+</html>

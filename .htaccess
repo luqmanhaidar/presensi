@@ -1,0 +1,9 @@
+order allow,deny
+deny from 10.25.0
+deny from 172.17.18.19
+deny from 10.11.12.13
+deny from proxy.uny.ac.id
+allow from all
+
+ErrorDocument 403 "<strong><center>Silakan ganti settingan proxy menjadi http://proxy.uny.ac.id/setting.pac sesuai dengan petunjuk di alamat <a href=http://puskom.uny.ac.id/2010/01/28/perubahan-setting-proxy-uny>ini</a><br>Presensi ini tidak bisa diakses dari speedy-uny</center></strong>" 
+

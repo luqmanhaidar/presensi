@@ -1,0 +1,12 @@
+2012/03/29 04:02:15 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/usr/home/website/public_html/chive/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /usr/home/website/public_html/chive/yii/web/CAssetManager.php:73
+Stack trace:
+#0 /usr/home/website/public_html/chive/yii/web/CAssetManager.php(58): CAssetManager->setBasePath('/usr/home/websi...')
+#1 /usr/home/website/public_html/chive/protected/components/messages/CXmlMessageSource.php(76): CAssetManager->getBasePath()
+#2 /usr/home/website/public_html/chive/index.php(81): CXmlMessageSource->publishJavaScriptMessages()
+#3 {main} REQUEST_URI=/chive/
+2012/03/29 04:02:46 [error] [exception.CDbException] could not find driver
+2012/03/29 04:02:56 [error] [exception.CDbException] could not find driver
+2012/03/29 04:03:22 [error] [exception.CDbException] could not find driver
+2012/03/29 04:04:51 [error] [exception.CDbException] could not find driver
+2012/03/29 04:20:43 [error] [exception.CDbException] could not find driver
+2012/03/29 04:20:58 [error] [exception.CDbException] could not find driver
