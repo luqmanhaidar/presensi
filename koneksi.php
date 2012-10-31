@@ -1,7 +1,7 @@
 <?php	
 		$db_host = "localhost";  // nama host  
 		$db_user = "mrcoco";  // username mysql  
-		$db_pass = "northface"; //password isi sesuai setting server Anda.  
+		$db_pass = ""; //password isi sesuai setting server Anda.  
 		$db_name = "presensi";  // nama database 
 
 		// koneksi ke database  
